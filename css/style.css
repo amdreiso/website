@@ -1,10 +1,17 @@
 
-* {
+body {
+	--link-color: #5b49db;
+	--text-color: #e5e5e5;
+
 	margin: 0;
 	background: #181818;
 
-	color: #e5e5e5;
+	color: var(--text-color);
 
 	font-family: "0xProto Nerd Font";
+}
+
+a {
+	color: var(--link-color);
 }
 
