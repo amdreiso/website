@@ -10,8 +10,11 @@ function add(img, name, description, url) {
 	});
 }
 
+// Game list
 add("thumbnail1.png", "Space Sim", "Pillage planets, discover galaxies and upgrade your spaceship!", "");
 
+
+// Render game links
 function render() {
 	const gameList = document.getElementById("gameList");
 
