@@ -99,6 +99,16 @@
 	font-size: 10px;
 }
 
+
+.gameDisplayContent {
+	width: 100%;
+}
+
+.gameDisplayTitle {
+	font-size: 30px;
+}
+
+
 .links {
 	display: flex;
 	flex-direction: column;
