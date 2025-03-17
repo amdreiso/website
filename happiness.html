@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Happy</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<style>
+body {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#count span {
+	font-size: 2em;
+	padding: 2px;
+}
+
+#time {
+	font-size: 2em;
+	margin: 105px
+}
+</style>
+	</head>
+	<body>
+		<div id="count"></div>
+		<h1 id="time"></h1>
+	</body>
+
+	<script>
+		const count = document.getElementById("count");
+		const characterDone = "❤️";
+		const characterNotDone = "🤍";
+
+		function countDaysExcludingSundays(startDate, endDate) {
+    	const d1 = new Date(startDate);
+    	const d2 = new Date(endDate);
+
+    	let count = 0;
+    	let currentDate = new Date(d1);
+
+    	while (currentDate <= d2) {
+        if (currentDate.getDay() !== 0) {
+            count++;
+        }
+        currentDate.setDate(currentDate.getDate() + 1);
+    	}
+
+    	return count;
+		}
+
+		// count days
+		const today = new Date();
+		const doomDay = new Date("2025-03-07");
+		const doomEnd = new Date("2025-12-01");
+		const diffTime = Math.abs(doomDay - today);
+		let diffTimeDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+		//let counter = Math.abs(doomEnd - doomDay) / (1000 * 60 * 60 * 24);
+		let counter = countDaysExcludingSundays(doomDay, doomEnd);
+		diffTimeDays = countDaysExcludingSundays(doomDay, today);
+
+		document.getElementById("time").innerHTML = `${diffTimeDays}/${counter}`;
+
+		function setCounter() {
+			// Delete every child of the count div
+			while (count.firstChild) {
+				count.removeChild(count.firstChild);
+			}
+
+			for (let i = 0; i < counter; i++) {
+				let val = characterNotDone;
+
+				if (i < diffTimeDays) {
+					val = characterDone;
+				}
+
+				const heart = document.createElement("span");
+				heart.innerHTML = val;
+				count.appendChild(heart);
+			}
+		}
+
+		setCounter();
+	</script>
+
+</html>
+
