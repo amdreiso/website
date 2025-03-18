@@ -40,6 +40,12 @@
 	font-weight: bold;
 }
 
+.neve {
+	width: 100px;
+	top: -82.5%;
+	position: relative;
+}
+
 .section {
 	width: 100%;
 
