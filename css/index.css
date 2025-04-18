@@ -1,156 +1,75 @@
 
-.banner {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-
-	text-align: center;
-	height: 300px;
-}
-
-.banner p {
-	font-size: 2em;
-}
-
-.banner p2 {
-	color: darkgray;
-	font-size: 1.5em;
-}
-
-.items {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	text-align: center;
-	height: 100px;
-
-	background: #cba6f7;
-
-	margin-bottom: 50px;
-}
-
-.items a {
-	color: var(--link-color);
-	margin: 0 15px;
-
-	font-size: 24px;
-
-	font-weight: bold;
-}
-
-.neve {
-	width: 100px;
-	top: -82.5%;
-	position: relative;
-}
-
-.section {
-	width: 100%;
-
-	text-align: center;
-
-	margin: 0 auto;
-}
-
-#gameList {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-}
-
-#gameList a {
-	background: none;
-}
-
-.gameContainer {
-	width: 500px;
-	height: fit-content;
-
-	cursor: pointer;
-	transition: .2s ease;
-
-	padding: 5px 10px;
-
-	background: none;
-
-	border-radius: 10px;
-	border: 1px solid #cba6f7;
-}
-
-.gameContainer:hover {
-	background-color: #ffffff10;
-}
-
-#gameList a {
-	text-decoration: none;
-	color: var(--text-color);
-}
-
-.gameImage {
-	width: 400px;
-	border-radius: 5px;
-
-	margin: 14px 0;
-}
-
-.gameTitle {
-	font-size: 20px;
-}
-
-.gameDescription {
-	font-size: 10px;
-}
-
-
-.gameDisplayContent {
-	width: 100%;
-}
-
-.gameDisplayTitle {
-	font-size: 30px;
-}
-
-
 .links {
-	display: flex;
-	flex-direction: column;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 1px;
 
-	align-items: center;
-	justify-content: center;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.card {
-	width: 400px;
-	padding: 0;
+.links a {
+  padding: 0 15px;
+  width: fit-content;
+  font-size: 3em;
 
-	color: white;
-	border: 1px solid var(--accent-color-1);
-	border-radius: 5px;
+  text-align: center;
+  transition: .1s ease;
 
-	background: none;
-
-	margin: 35px 10px;
-	text-decoration: none;
+  text-decoration: none;
 }
 
-.card h1 {
-	background: var(--accent-color-1);
-	margin: 0;
-	padding: 8px;
-	color: black;
+.links a:hover {
+  cursor: pointer;
+  padding: 0 50px;
 }
 
-.card p {
-	color: darkgray;
-	font-size: 16px;
+.music-link {
+  background: #310d0d;
+  margin-left: 0px;
+  color: white;
 }
 
+.game-link {
+  background: #ee0909;
+  margin-left: 9px;
+  color: white;
+}
 
+.video-link {
+  background: #760fcc;
+  margin-left: 25px;
+  color: white;
+}
 
+.picture-link {
+  background: #cdf0cd;
+  margin-left: 70px;
+  color: black;
+}
+
+.other-link {
+  background: #5d126f;
+  margin-left: 220px;
+  color: white;
+}
+
+.left-panel {
+  width: 60%;
+  padding-right: 10px;
+}
+
+.right-panel {
+  width: 40%;
+  text-align: center;
+}
+
+.panels {
+  display: flex;
+  flex-direction: row;
+}
 
 
 

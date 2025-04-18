@@ -1,22 +1,18 @@
 
 body {
-	--background-color: #000000;
+	--background-color: #000;
 	--link-color: black;
 	--link-background-color: #cba6f7;
 	--text-color: #e5e5e5;
 	--accent-color-1: #cba6f7;
 
-	margin: 0;
+	margin: 40px;
 	background: var(--background-color);
 
 	color: var(--text-color);
 }
 
-a {
-	padding: 5px 8px;
-
-	border-radius: 3px;
-	background-color: var(--link-background-color);
-	color: var(--link-color);
+p {
+  margin-left: 20px;
 }
 
