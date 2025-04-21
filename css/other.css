@@ -24,7 +24,6 @@
 .links a:hover {
   cursor: pointer;
   padding: 0 50px;
-  transform: rotate(2deg);
 }
 
 .mc-link {

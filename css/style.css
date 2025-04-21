@@ -12,7 +12,17 @@ body {
 	color: var(--text-color);
 }
 
+h1 {
+  font-size: 2.5em;
+}
+
 p {
   margin-left: 20px;
+  font-size: 1.25em;
+}
+
+section {
+  margin-bottom: 50px;
+  padding: 1px 10px;
 }
 
