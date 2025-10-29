@@ -32,6 +32,17 @@
   color: black;
 }
 
+.diary-link {
+	background: pink;
+	color: black;
+	margin-left: 48px;
+}
+
+.morse-link {
+	background: #20485f;
+	color: white;
+	margin-left: 98px;
+}
 
 
 

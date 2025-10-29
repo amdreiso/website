@@ -1,9 +1,9 @@
 
 body {
-	--background-color: #000;
-	--link-color: black;
+	--background-color: black;
+	--link-color: aqua;
 	--link-background-color: #cba6f7;
-	--text-color: #e5e5e5;
+	--text-color: lightgray;
 	--accent-color-1: #cba6f7;
 
 	margin: 40px;
@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 1.75em;
 }
 
 p {
@@ -22,7 +22,24 @@ p {
 }
 
 section {
-  margin-bottom: 50px;
+  margin: 50px 0;
   padding: 1px 10px;
+	background: #050505;
+	border-top: 5px solid #101010;
+	border-right: 5px solid aqua;
+}
+
+.panels {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.left-panel {
+	width: 46%;
+}
+
+.right-panel {
+	width: 46%;
 }
 

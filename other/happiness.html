@@ -10,6 +10,8 @@
         width: 70%;
         margin: 0 auto;
         text-align: center;
+				background: black;
+				color: white;
       }
 
       #count span {
@@ -65,7 +67,7 @@
 		// count days
 		const today = new Date();
 		const doomDay = new Date("2025-03-07");
-		const doomEnd = new Date("2025-12-01");
+		const doomEnd = new Date("2025-11-15");
 		const diffTime = Math.abs(doomDay - today);
 		let diffTimeDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
