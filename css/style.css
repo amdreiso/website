@@ -6,7 +6,7 @@ body {
 	--text-color: lightgray;
 	--accent-color-1: #cba6f7;
 
-	margin: 40px;
+	margin: 0;
 	background: var(--background-color);
 
 	color: var(--text-color);
@@ -21,7 +21,7 @@ p {
   font-size: 1.25em;
 }
 
-section {
+.section {
   margin: 50px 0;
   padding: 1px 10px;
 	background: #050505;

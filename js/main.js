@@ -1,34 +1,51 @@
 
-function showSection() {
-  const hash = window.location.hash.substring(1);
-  document.querySelectorAll('.section').forEach(div => {
-    div.style.display = div.id === hash ? 'block' : 'none';
-  });
+
+
+// LINKS
+class Link {
+	constructor(name, src) {
+		this.name = name;
+		this.src = src;
+	}
 }
 
-window.addEventListener('hashchange', showSection);
-window.addEventListener('DOMContentLoaded', showSection);
+let links = [];
 
-
-function getRandomColor() {
-  const max = 60;
-  var r = Math.floor(Math.random() * max);
-  var g = Math.floor(Math.random() * max);
-  var b = Math.floor(Math.random() * max);
-
-  return {
-    r: r,
-    g: g,
-    b: b,
-  }
+createLink = function(name, src) {
+	links.push(new Link(name, src));
 }
 
-var sections = document.querySelectorAll("section");
+createLink("music", "./music.html");
+createLink("games", "");
+createLink("videos", "https://youtube.com/@amdrei");
+createLink("pictures", "");
+createLink("military_conscription", "./other/happiness.html");
+createLink("travels", "");
+createLink("terrariums", "");
+createLink("onlyfans", "");
+createLink("exclusive bussy", "");
+createLink("flags", "");
+createLink("minecraft", "");
 
-sections.forEach(e => {
-  var color = getRandomColor();
-  //e.style = `background: rgb(${color.r}, ${color.g}, ${color.b});`;
-});
+const linkdiv = document.getElementById("links");
+
+linkUpdate = function() {
+	for (var i = 0; i < links.length; i++) {
+		var a = document.createElement("a");
+		a.innerHTML = links[i].name;
+		a.href = links[i].src;
+		linkdiv.append(a);
+	}
+}
+
+linkUpdate();
+
+
+
+
+// Glitter or something
+
+instances = [];
 
 
 
