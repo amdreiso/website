@@ -132,12 +132,13 @@
 
 
 #canvas {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	border: 1px solid white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* so it doesn't block clicks */
+  z-index: 9999;        /* on top of everything */
 }
 
 .dadada {
@@ -149,6 +150,14 @@
 	width: 300px;
 }
 
+.music-box {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.music-player {
+	width: 90%;
+}
 
 
 .item {
