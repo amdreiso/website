@@ -1,0 +1,5 @@
+
+include include_example_0
+
+HELLO()
+

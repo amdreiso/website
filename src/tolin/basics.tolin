@@ -1,0 +1,29 @@
+
+// this is a comment
+
+func HELLO
+  "Hello, world!" print
+end
+
+HELLO()
+
+34 set a
+35 set b
+a b + set c
+
+c print
+
+69 c = if
+  "The math was correct!" print
+end
+
+0 set i
+while i 10 <
+  i print
+  i 1 + set i
+end
+
+420 set some_number
+some_number to_string() // converts number into string
+
+
