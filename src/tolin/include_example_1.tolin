@@ -1,5 +1,5 @@
 
-include include_example_0
+include hello 		// doesn't require .tolin
 
 HELLO()
 

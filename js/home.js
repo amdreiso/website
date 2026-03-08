@@ -23,8 +23,7 @@ const linkGenerate = () => {
 }
 
 linkPush(linkCreate("tolin", "src/tolin.html"))
-linkPush(linkCreate("tolin", "src/tolin.html"))
-linkPush(linkCreate("tolin", "src/tolin.html"))
+linkPush(linkCreate("tolin_interpreter", "src/tolin_interpreter.html"))
 
 linkGenerate()
 
