@@ -1,6 +1,8 @@
 
 let DOCS = {};
 
+const keywords = ['array', 'assign', 'struct', 'get', 'func', 'end', 'set', 'while', 'if', 'include'];
+
 // PAGES
 const PAGES = {};
 const pageRegister = (name, category, fn) => {
@@ -13,9 +15,130 @@ const pageRegister = (name, category, fn) => {
 pageRegister("overview", "general", async (doc) => {
 	await doc.push(
 		docCreateText("Basic code snippet of TOLIN, with most of its functionalities"),
-		await docCreateCodeFile("../src/tolin/basics.tolin"),
+
+
+		docCreateBr(),
+		docCreateText("Variables"),
+		docCreateCode(
+`0 set x
+false set y
+3.1419 set pi`),
+
+
+		docCreateBr(),
+		docCreateText("Operations"),
+		docCreateCode(
+`10 20 + print    // prints 10 + 20
+10 20 - print    // prints 10 - 20
+10 20 * print    // prints 10 * 20
+10 20 / print    // prints 10 / 20`),
+
+
+		docCreateBr(),
+		docCreateText("Functions"),
+		docCreateCode(
+`// functions are called like this
+arg3 arg2 arg1 func_name()
+`),
+		docCreateCode(
+`func HELLO
+  "Hello, from tolin!" print
+end
+HELLO() // outputs: Hello, from tolin!
+
+func multiply_by_69
+  set x         // first argument
+  x 69 *        // pushes the result of x * 69 to the stack, like a return
+end
+5 multiply_by_69() set result
+result print // outputs: 345
+
+func whoami 
+  set name                     // first argument
+  set age                      // second argument
+  age to_string() set age      // convert number to string    
+  "You are " name + "of " + age + " years of age!" print
+end
+35 "John Doe" whoami() // outputs: You are John Doe of 35 years of age!`),
+
+
+		docCreateBr(),
+		docCreateText("Conditions"),
+		docCreateCode(
+`10 10 =         if "10 is equal to 10"                 print end
+10 20 =!        if "10 is not equal to 20"             print end
+10 20 >         if "10 is not greater than 20"         print end
+10 20 <         if "10 is not less than 20"            print end
+10 20 >=        if "10 is not greater or equal to 20"  print end
+10 20 <=        if "10 is not less or equal to 20"     print end
+true false ||   if "true or false"                     print end
+true true &&    if "true and true"                     print end
+`),
+
+
+		docCreateBr(),
+		docCreateText("If statement"),
+		docCreateCode(
+`condition if
+end`),
+		docCreateCode(
+`true set running
+running if
+  "game is running, better go catch it" print
+end
+
+// if 10 > 20
+10 20 > if
+  "the math is NOT mathing" print
+end`),
+		docCreateBr(),
+		docCreateText("While loop"),
+		docCreateCode(
+`0 set i
+while i 10 <
+  i print
+  i 1 + set i
+end`),
+		docCreateBr(),
+		docCreateText("Structs"),
+		docCreateCode(
+`struct
+  x 0
+  y 0
+  name "John Doe"
+end set player
+
+player "x" get print       // outputs: 0
+player "name" get print    // outputs: John Doe
+
+player "x" 100 assign      // x is now 100`),
+
+
+		docCreateBr(),
+		docCreateText("Arrays"),
+		docCreateCode(
+`array
+  69
+  420
+end set cool_numbers
+
+cool_numbers 8008132 push()
+cool_numbers 1 1337 insert()
+
+cool_numbers 0 get print // outputs: 69
+
+0 set i
+cool_numbers length() 1 - set len // array length - 1
+
+// Loop through array and print every number on it
+while i len <
+  cool_numbers i get print
+  i 1 + set i
+end`),
+
 	);
-})
+		
+});
 
 pageRegister("include", "general", async (doc) => {
 	await doc.push(
@@ -24,7 +147,7 @@ pageRegister("include", "general", async (doc) => {
 		docCreateText("We can then, include the file above, to access the HELLO function"),
 		await docCreateCodeFile("../src/tolin/include_example_1.tolin"),
 	);
-})
+});
 
 pageRegister("power", "math", async (doc) =>{
 	await doc.push(
@@ -338,7 +461,6 @@ docCreateBr = () => {
 }
 
 const highlightString = (code) => {
-	const keywords = ['func', 'end', 'set', 'while', 'if', 'include'];
 	const keywordRegex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'g');
 
 	code = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

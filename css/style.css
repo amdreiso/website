@@ -75,7 +75,13 @@ yellow {
 }
 
 green {
-	color: #557755;
+	--keyword-green: #557755;
+	color: var(--keyword-green);
+}
+
+green yellow {
+	color: var(--keyword-green);
+	font-weight: normal;
 }
 
 

@@ -7,7 +7,6 @@ body {
 	display: flex;
 	flex-direction: row;
 	user-select: none;
-	margin-left: 25px;
 	justify-content: center;
 	align-items: center;
 }
