@@ -4,7 +4,7 @@ body {
 
 	background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-gNo-DE1naIE%2FVUk3ds1jnmI%2FAAAAAAAAB9c%2FyAF0ZTbjXA0%2Fs1600%2Fcirrus1.jpg&f=1&nofb=1&ipt=9e76bd8908438050c0a0c419f7484fbbfa5bebd3a910f1eaa7c641c79cc19b95);
 	background-repeat: no-repeat;
-	background-size: 200%;
+	background-size: 300%;
 	image-rendering: crisp-edges;
 
 
@@ -44,10 +44,7 @@ img {
 .cool-border {
 	--header-border-size: 8px;
 
-	border-top: var(--header-border-size) solid #333388;
-	border-left: var(--header-border-size) solid #333388;
-	border-right: var(--header-border-size) solid #7777cc;
-	border-bottom: var(--header-border-size) solid #7777cc;
+	border-radius: 10px;
 }
 
 .cloud-separator {

@@ -1,7 +1,7 @@
 
 let DOCS = {};
 
-const keywords = ['array', 'assign', 'struct', 'get', 'func', 'end', 'set', 'while', 'if', 'include'];
+const keywords = ['do', 'array', 'assign', 'struct', 'get', 'func', 'end', 'set', 'while', 'if', 'include'];
 
 // PAGES
 const PAGES = {};
@@ -95,7 +95,7 @@ end`),
 		docCreateText("While loop"),
 		docCreateCode(
 `0 set i
-while i 10 <
+while i 10 < do
   i print
   i 1 + set i
 end`),

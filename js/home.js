@@ -22,9 +22,8 @@ const linkGenerate = () => {
 	}
 }
 
-linkPush(linkCreate("tolin", "src/tolin.html"))
-linkPush(linkCreate("DEATH_RANCH", "src/DEATH_RANCH.html"))
-linkPush(linkCreate("Andy's Station", "src/andystation.html"))
+linkPush(linkCreate("tolin", "src/tolin/tolin.html"))
+linkPush(linkCreate("Andy's Station", "src/andy/andystation.html"))
 
 linkGenerate()
 
