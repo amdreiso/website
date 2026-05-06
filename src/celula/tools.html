@@ -6,7 +6,25 @@
 </head>
 
 <body>
-	<h1>Célula Tools</h1>
+	<div class="header">
+		<h1>Célula Tools</h1>
+		<img src="../img/commander.png">
+		<img src="../img/improbable.png">
+	</div>
+
+	<details class="weapon-create">
+		<summary>Weapon Create</summary>
+		<div class="prompt">
+			<div class="value">name:<input type="text" id="wc_name"></input></div>
+			<div class="value">damage:<input type="text" id="wc_damage"></input></div>
+			<div class="value">fire rate:<input type="text" id="wc_cooldown"></input></div>
+			<div class="value">precision:<input type="text" id="wc_precision"></input></div>
+			<div class="value">weight:<input type="text" id="wc_weight"></input></div>
+			<div class="value">recoil:<input type="text" id="wc_recoil"></input></div>
+
+			<button id="wc_submit">create</button>
+		</div>
+	</details>
 
 	<details class="weapon-morphing">
 		<summary>Weapon Morphing</summary>
@@ -14,17 +32,38 @@
 			<div class="field">
 				<div class="value">
 					<p>rarity: </p>
-					<select size="1" onchange="selectRarity(this.value)">
+					<select size="1" id="rarityOption">
 						<option>COMMON</option>
+						<option>EPIC</option>
+						<option>LEGENDARY</option>
 					</select>
 				</div>
 			</div>
-			<div class="field"><div class="value">
-					<select id="weapon1" class="weaponOptions" size="1"></select>
-					<select id="weapon2" class="weaponOptions" size="1"></select>
-			</div></div>
+			<div class="field">
+				<div class="value">
+					<p>weapon 1:</p> <select id="weapon1" class="weaponOptions" size="1"></select>
+				</div>
+			</div>
+			<div class="field">
+				<div class="value">
+					<p>weapon 2:</p> <select id="weapon2" class="weaponOptions" size="1"></select>
+				</div>
+			</div>
+		</div>
 
 			<button id="morphButton">morph</button>
+
+			<p class="disclaimer">It is good to know that weight is how long it takes for the weapon to follow the cursors position, 1 being instantly, 0 being impossibly heavy.</p>
+			<p class="disclaimer">The fire rate is how long it takes per frame to shoot, the higher the number, the slower it is.</p>
+
+			<div class="result-table">
+				<div class="value" style="color: gray;">value: <span>weapon1 → weapon2 = weapon3</span></div>
+				<div class="value">damage: <span id="display_damage">0</span></div>
+				<div class="value">recoil: <span id="display_recoil">0</span></div>
+				<div class="value">fire rate: <span id="display_cooldown">0</span></div>
+				<div class="value">precision: <span id="display_precision">0</span></div>
+				<div class="value">weight: <span id="display_weight">0</span></div>
+			</div>
 		</div>
 	</details>
 </body>

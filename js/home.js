@@ -1,10 +1,11 @@
 
 let links = []
 
-const linkCreate = (name, url) => {
+const linkCreate = (name, url, desc="") => {
 	return {
 		name : name,
-		url : url
+		url : url,
+		desc : desc
 	}
 }
 
@@ -18,13 +19,14 @@ const linkGenerate = () => {
 		let anchor = document.createElement("a")
 		anchor.innerHTML = l.name
 		anchor.href = l.url
+		anchor.title = l.desc
 		LINKS.append(anchor)
 	}
 }
 
-linkPush(linkCreate("tolin", "src/tolin/tolin.html"))
-linkPush(linkCreate("Célula Tools", "src/celula/tools.html"))
-linkPush(linkCreate("Andy's Station", "src/andy/andystation.html"))
+linkPush(linkCreate("tolin", "src/tolin/tolin.html", "Stack based scripting language for Gamemaker"))
+linkPush(linkCreate("Célula Tools", "src/celula/tools.html", "Tools for célula mechanics"))
+linkPush(linkCreate("Andy's Station", "src/andy/andystation.html", "my personal website"))
 
 linkGenerate()
 
