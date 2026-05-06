@@ -23,6 +23,7 @@ const linkGenerate = () => {
 }
 
 linkPush(linkCreate("tolin", "src/tolin/tolin.html"))
+linkPush(linkCreate("Célula Tools", "src/celula/tools.html"))
 linkPush(linkCreate("Andy's Station", "src/andy/andystation.html"))
 
 linkGenerate()

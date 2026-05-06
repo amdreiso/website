@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="celula.css">
+	<title>Célula Tools</title>
+</head>
+
+<body>
+	<h1>Célula Tools</h1>
+
+	<details class="weapon-morphing">
+		<summary>Weapon Morphing</summary>
+		<div class="calculations">
+			<div class="field">
+				<div class="value">
+					<p>rarity: </p>
+					<select size="1" onchange="selectRarity(this.value)">
+						<option>COMMON</option>
+					</select>
+				</div>
+			</div>
+			<div class="field"><div class="value">
+					<select id="weapon1" class="weaponOptions" size="1"></select>
+					<select id="weapon2" class="weaponOptions" size="1"></select>
+			</div></div>
+
+			<button id="morphButton">morph</button>
+		</div>
+	</details>
+</body>
+<script type="module" src="weaponMorphing.js"></script>
+</html>
+
+
+
