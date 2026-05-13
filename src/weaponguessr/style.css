@@ -1,0 +1,30 @@
+
+body {
+	background: #0b1b23;
+}
+
+.center {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.center * {
+	margin: 30px;
+}
+
+#display_image {
+	width: 50%;
+}
+
+#game_input {
+	padding: 10px;
+	font-size: 3em;
+	background: #00000050;
+	border: none;
+	border-bottom: 4px solid aqua;
+	color: white;
+}
+
