@@ -8,19 +8,23 @@ ul {
 }
 
 .menu {
-	background: #181818;
+	background: #3333aa;
+	background-image: url("https://frutigeraeroarchive.org/images/wallpapers/asadal_stock/asadal_stock_1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	padding: 20px;
 	margin: 0;
 	box-shadow: 1px 1px 20px 2px #00000030;
+	color: white;
+
+	text-shadow: 2px 2px 5px #00000070;
 }
 
 .subtitle {
 	margin: 0 auto;
 	width: 80%;
-	color: #ccc;
 	font-size: 1.85em;
 	font-weight: normal;
-	font-style: italic;
 }
 
 .projects-title {
@@ -35,7 +39,7 @@ ul {
 .socials a {
 	display: inline-block;
 	height: 50px;
-	color: #7777ff;
+	color: #55ff55;
 	padding: 20px;
 	transition: 0.25s ease;
 	border-radius: 50%;
@@ -48,7 +52,7 @@ ul {
 }
 
 .socials a:hover svg {
-	fill:white;
+	fill: green;
 }
 
 .socials a:hover{
@@ -62,7 +66,7 @@ ul {
 	justify-content: center;
 	align-items: center;
 
-	border: 4px solid #7777ff;
+	border: 4px solid white;
 	width: fit-content;
 	padding: 25px;
 	margin: 0 auto;
@@ -75,7 +79,7 @@ ul {
 	cursor: pointer;
 	padding: 10px;
 	margin: 0 10px;
-	color: #7777ff;
+	color: yellow;
 	transition: .1s ease;
 	background: #242424;
 }

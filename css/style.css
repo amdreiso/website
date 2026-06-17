@@ -1,6 +1,6 @@
 
 * {
-	--background-color: #101010; 
+	--background-color: #000033; 
 	--text-color: #eee;
 	--link-color: yellow;
 	--accent-color: #ff4444;
@@ -11,7 +11,7 @@ body {
 	background: var(--background-color);
 	color: var(--text-color);
 
-	font-family: monospace;
+	font-family: Verdana, Arial, sans-serif;
 }
 
 br {

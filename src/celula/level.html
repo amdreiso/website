@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<style>
+body {
+	background: white;
+}
+#game {
+	border: 2px solid grey;
+	margin: 10px;
+}
+</style>
+</head>
+
+<body>
+	<div class="settings">
+		<input id="input_width" type="number" value="400"></input>
+		<input id="input_height" type="number" value="400"></input>
+	</div>
+	<div class="display">
+		<canvas id="game"></canvas>
+	</div>
+
+<script>
+	const FPS = 60
+	const GRID = 8
+
+	const ctx = game.getContext('2d')
+
+	function drawGrid() {
+		for (let y = 0; y < game.height / GRID; ++y) {
+			ctx.fillStyle = "rgb(255, 255, 255)";
+			ctx.fillWidth = 2;
+			ctx.beginPath();
+			ctx.moveTo(0, y * GRID);
+			ctx.lineTo(game.width, y * GRID);
+			ctx.stroke();
+		}
+	}
+
+	function update() {
+		game.width = input_width.value
+		game.height = input_height.value
+
+		ctx.clearRect(0, 0, game.width, game.height);
+
+		drawGrid()
+
+		setTimeout(update, 1000/FPS)
+	}
+
+	setTimeout(update, 1000/FPS)
+
+</script>
+
+</body>
+</html>
+
