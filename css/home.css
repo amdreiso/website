@@ -1,58 +1,57 @@
 
 body {
-	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+#main_panel {
+	width: fit-content;
+	text-align: left;
 }
 
 ul {
 	padding: 0;
 }
 
+h1 {
+	text-align: left;
+	margin-left: 20px;
+}
+
 .menu {
-	background: #3333aa;
-	background-image: url("https://frutigeraeroarchive.org/images/wallpapers/asadal_stock/asadal_stock_1.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 20px;
+	padding: 0px;
 	margin: 0;
-	box-shadow: 1px 1px 20px 2px #00000030;
 	color: white;
-
-	text-shadow: 2px 2px 5px #00000070;
 }
 
-.subtitle {
-	margin: 0 auto;
-	width: 80%;
-	font-size: 1.85em;
-	font-weight: normal;
+#fake_ad {
+	text-align: center;
 }
 
-.projects-title {
-	margin: 50px 0;
-	font-size: 3em;
+#fake_ad img {
+	width: 200px;
 }
 
 .socials {
-	margin: 50px;
 }
 
 .socials a {
 	display: inline-block;
-	height: 50px;
-	color: #55ff55;
-	padding: 20px;
+	height: 20px;
+	color: #ffc0cb;
+	padding: 5px;
 	transition: 0.25s ease;
 	border-radius: 50%;
 }
 
 .socials a svg {
-	width: 50px;
+	width: 20px;
 	fill: #7777ff;
 	transition: 0.25s ease;
 }
 
 .socials a:hover svg {
-	fill: green;
+	fill: #ffc0cb;
 }
 
 .socials a:hover{
@@ -65,30 +64,32 @@ ul {
 	user-select: none;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	margin: 20px 0;
 
-	border: 4px solid white;
 	width: fit-content;
-	padding: 25px;
-	margin: 0 auto;
-	background: #242424;
-	margin-bottom: 100px;
+	background: #101010;
+
+	border-left: 4px solid var(--link-color);
+	border-right: 4px solid var(--link-color);
 }
 
 #LINKS a {
 	width: fit-content;
 	cursor: pointer;
 	padding: 10px;
-	margin: 0 10px;
-	color: yellow;
+	color: var(--link-color);
 	transition: .1s ease;
-	background: #242424;
+	font-size: 1em;
 }
 
 #LINKS a:hover {
-	background: #181818;
+	color: #ffc0cb;
 }
 
-
+#gm_libs a {
+	width: fit-content;
+}
 
 
 

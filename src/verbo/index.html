@@ -1,0 +1,46 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<title>verbo - learn vocabulary</title>
+	</head>
+
+	<body>
+		<input type="file" id="input_file_handler" style="display: none;"/>
+		<div class="nav">
+			<h1>verbo.</h1>
+			<a id="nav_new">New</a>
+			<a id="nav_open">Open</a>
+			<a id="nav_save">Save</a>
+		</div>
+
+		<div class="app">
+			<span id="language_name"></span>
+			<span id="score_count">score: 0</span>
+			<div class="word-display">
+				<span id="token_display"></span>
+			</div>
+			<div class="input-panel">
+				<input id="guess_input" type="text" />
+			</div>
+			<div class="buttons">
+				<button id="button_get">get</button>
+				<button id="button_add">add</button>
+				<button id="button_reveal">reveal</button>
+				<button id="button_guess">guess</button>
+			</div>
+
+			<div class="panel-add hidden" id="add_panel">
+				<input id="panel_input_word1" type="text" placeholder="word1" />
+				<input id="panel_input_word2" type="text" placeholder="word2" />
+				<div class="panel-buttons">
+					<button id="panel_add_add">add</button>
+					<button id="panel_add_cancel">cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="verbo.js"></script>
+	</body>
+</html>
+

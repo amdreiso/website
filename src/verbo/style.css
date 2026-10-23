@@ -1,0 +1,146 @@
+
+* {
+	--background-dark: #111;
+	--background: #222;
+	--background-light: #333;
+	--link-foreground: #77f;
+	--link-dark: #44d;
+	--text-color: #ddd;
+}
+
+body {
+	margin: 0;
+	background: var(--background);
+	color: var(--text-color);
+}
+
+button {
+	cursor:pointer;
+}
+
+.nav {
+	background: var(--background-dark);
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.nav * {
+	padding: 0 20px;
+}
+
+.nav h1 {
+	font-size: 3em;
+	margin: 0;
+}
+
+.nav a {
+	font-size: 2em;
+}
+
+.nav a:hover{
+	cursor: pointer;
+	background: var(--link-foreground);
+}
+
+.app {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	height:-webkit-fill-available;
+}
+
+.app * {
+	margin: 50px 0;
+}
+
+.app .buttons button {
+	background:var(--link-foreground);
+	border:0;
+	border-radius:5px;
+	font-size:3em;
+	padding: 10px 40px;
+	margin: 0 20px;
+}
+
+.app .buttons button:hover {
+	background:var(--link-dark);
+}
+
+.app .word-display span {
+	font-size: 7em;
+}
+
+
+#language_name {
+	position:absolute;
+	top:2%;
+	font-size: 2em;
+}
+
+#score_count {
+	position:absolute;
+	top:4%;
+	font-size: 2em;
+}
+
+.input-panel input {
+	padding: 5px;
+	background: var(--background-dark);
+	border: 2px solid var(--link-foreground);
+	color: var(--text-color);
+	font-size: 3em;
+	border-bottom: 4px solid var(--link-foreground);
+}
+
+.panel-add * {
+	margin: 10px;
+}
+
+.panel-add {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	text-align: center;
+	background: var(--background-dark);
+	padding: 50px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 25px black;
+
+	margin: 0;
+}
+
+.panel-add input {
+	background: none;
+	border-radius: 0;
+	border: 2px solid var(--link-foreground);
+	border-bottom: 4px solid var(--link-foreground);
+	color: white;
+	font-size: 2em;
+}
+
+.panel-add button {
+	background: var(--link-foreground);
+	padding: 10px 30px;
+	border: none;
+	border-radius: 5px;
+	font-size: 2em;
+}
+
+.panel-add button:hover {
+	background: var(--link-dark);
+}
+
+#panel_add_cancel {
+	background: #ff7777;
+}
+
+#panel_add_cancel:hover {
+	background: #dd5555;
+}
+
+.hidden {
+	display: none;
+}
+

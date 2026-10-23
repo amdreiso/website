@@ -1,9 +1,10 @@
 
 * {
-	--background-color: #000033; 
+	--background-color: #000000; 
 	--text-color: #eee;
-	--link-color: yellow;
+	--link-color: #9999ff;
 	--accent-color: #ff4444;
+	--link-hover: #ffc0cb;
 }
 
 body {
@@ -11,15 +12,15 @@ body {
 	background: var(--background-color);
 	color: var(--text-color);
 
-	font-family: Verdana, Arial, sans-serif;
+	font-family: Monospace;
 }
 
 br {
-	margin: 10px 0;
+	margin: 2px 0;
 }
 
 h1 {
-	font-size: 4em;
+	font-size: 2.5em;
 	font-weight: normal;
 	margin : 0;
 }
@@ -30,10 +31,12 @@ a {
 	font-size: 2em;
 	margin : 0;
 	text-decoration: none; 
+	transition: .5s ease;
 }
 
 a:hover {
 	text-decoration: underline; 
+	color: var(--link-hover);
 }
 
 p {
@@ -52,7 +55,7 @@ p2 {
 }
 
 header {
-	margin: 25px 0;
+	margin: 0;
 }
 
 pre {
@@ -70,7 +73,7 @@ pre p {
 }
 
 yellow {
-	color: #eeee33;
+	color: purple;
 	font-weight: bold;
 }
 
