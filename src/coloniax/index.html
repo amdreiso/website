@@ -5,19 +5,103 @@
 <style>
 body {
 	background: #181818;
-	margin: 5px;
+	margin: 30px 5px;
 	image-rendering: pixelated;
+	font-family: monospace;
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.in-put {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 0.85em;
+}
+.side {
+	background: #101010;
+	padding: 20px;
+	border-radius: 5px;
+	margin: 120px 0;
+	width: 30%;
+}
+.side * {
+	margin: 5px 0;
+}
+#popups * {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 0; 
+	right: 0; 
+	margin-inline: auto; 
+	width: fit-content;
+	background: #ff4444;
+	padding: 10px;
+	border-radius: 10px;
 }
 canvas {
 	image-rendering: pixelated;
+}
+button {
+	display: inline;
+	background: #ff4444;
+	border: none;
+	border-radius: 3px;
+	font-size: 0.5em;
+	padding: 5px;
+	cursor: pointer;
+	color: white;
+}
+button:hover {
+	background: #cc1111;
+}
+#result {
+	width: fit-content;
+	padding: 5px;
+	font-size: 18px;
+	background: #101010;
+	border-radius: 10px;
+	margin: 20px 0;
+	cursor: pointer;
+	user-select: none;
+}
+separator {
+	display: inline-block;
+	width: 90%;
+	height: 1px;
+	background: #303030;
+	margin: 0 auto !important;
+	margin-top: 20px !important;
 }
 </style>
 </head>
 <body>
 <canvas id="game"></canvas>
-
+<div class="side">
+<div class="buttons">
+	<button id="flipx">flip x</button>
+	<button id="flipy">flip y</button>
+	<div class="the-boolean-clique">
+		<div class="in-put">
+			display numbers:
+			<input id="display_numbers" type="checkbox">
+		</div>
+		<div class="in-put">
+			cursor opacity:
+			<input id="cursor_opacity" type="range" min="0" max="1" step="0.01">
+		</div>
+	</div>
+</div>
+<separator></separator>
+<p id="result"></p>
+</div>
+<div id="popups"></div>
 <script type="text/javascript" src="main.js"></script>
-
 </body>
 </html>
 
