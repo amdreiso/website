@@ -3,6 +3,9 @@
 <head>
 <title>coloniax</title>
 <style>
+* {
+	user-select: none;
+}
 body {
 	background: #181818;
 	margin: 30px 5px;
@@ -13,6 +16,7 @@ body {
 	text-align: center;
 	display: flex;
 	flex-direction: row;
+	align-items: flex-start;
 	justify-content: space-around;
 }
 .in-put {
@@ -64,7 +68,7 @@ button:hover {
 	width: fit-content;
 	padding: 5px;
 	font-size: 18px;
-	background: #101010;
+	background: #050505;
 	border-radius: 10px;
 	margin: 20px 0;
 	cursor: pointer;
@@ -78,26 +82,37 @@ separator {
 	margin: 0 auto !important;
 	margin-top: 20px !important;
 }
+.result-mode-buttons button {
+	background: #404040;
+}
+
+.result-mode-buttons .selected {
+	background: #f0f0f0;
+	color: black;
+}
 </style>
 </head>
 <body>
 <canvas id="game"></canvas>
 <div class="side">
 <div class="buttons">
+	<div class="in-put">width: <input id="board_width" type="range" value="25" min="1" max="25"></div>
+	<div class="in-put">height: <input id="board_height" type="range" value="25" min="1" max="25"></div>
+	<div class="in-put">radius: <input id="board_radius" type="range" value="11" min="-1" max="25"></div>
 	<button id="flipx">flip x</button>
 	<button id="flipy">flip y</button>
+	<button id="clear_board">clear</button>
 	<div class="the-boolean-clique">
-		<div class="in-put">
-			display numbers:
-			<input id="display_numbers" type="checkbox">
-		</div>
-		<div class="in-put">
-			cursor opacity:
-			<input id="cursor_opacity" type="range" min="0" max="1" step="0.01">
-		</div>
+		<div class="in-put">display numbers:<input id="display_numbers" type="checkbox"></div>
+		<div class="in-put">cursor opacity:<input id="cursor_opacity" type="range" min="0" max="1" step="0.01"></div>
 	</div>
 </div>
 <separator></separator>
+<div class="buttons result-mode-buttons" id="result_mode_buttons">
+	<button id="result_mode_array" class="selected">array</button>
+	<button id="result_mode_vec2" class="">vec2</button>
+	<button id="result_mode_json" class="">json</button>
+</div>
 <p id="result"></p>
 </div>
 <div id="popups"></div>
