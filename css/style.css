@@ -1,10 +1,24 @@
 
 * {
-	--background-color: #000000; 
+	--background-color: #101010; 
+	--background-color2: #151515;
+	--background-color3: #181818;
 	--text-color: #eee;
-	--link-color: #9999ff;
 	--accent-color: #ff4444;
 	--link-hover: #ffc0cb;
+
+	--color-white: #fafafa;
+	--color-black: #050505;
+	--color-red: #f56c6d;
+	--color-orange: #f0944f;
+	--color-green: #7dca7c;
+	--color-blue: #73a1d8;
+	--color-magenta: #e18fc6;
+	--color-pink: #e9b6d8;
+
+	--link-color: var(--color-red);
+
+	text-decoration: none !important;
 }
 
 body {
@@ -31,7 +45,6 @@ a {
 	font-size: 2em;
 	margin : 0;
 	text-decoration: none; 
-	transition: .5s ease;
 }
 
 a:hover {

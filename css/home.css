@@ -1,12 +1,19 @@
 
 body {
-	display: flex;
-	justify-content: space-between;
+	text-align:center;
+}
+
+iframe {
+	font-size: 10px !important;
+	width: 90%;
+	background: #000;
+}
+
+iframe * {
+	background: #000 !important;
 }
 
 #main_panel {
-	width: fit-content;
-	text-align: left;
 }
 
 ul {
@@ -14,8 +21,20 @@ ul {
 }
 
 h1 {
-	text-align: left;
-	margin-left: 20px;
+	margin: 0;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: var(--background-color3);
+	padding: 20px 0;
+}
+
+.navbar * {
+	margin: 0 10px;
 }
 
 .menu {
@@ -25,37 +44,50 @@ h1 {
 }
 
 #fake_ad {
-	text-align: center;
-}
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 
+	text-align: center;
+	margin: 20px;
+}
 #fake_ad img {
 	width: 200px;
+	margin: 0 10px;
+}
+#fake_ad span {
+	background: #aa4444;
+	position: absolute;
+	font-size: 7px;
+	padding: 2px 5px;
+	transform: translate(-50%, 500%);
 }
 
 .socials {
+	background: var(--background-color3);
+	width: fit-content;
+	padding: 10px;
+	margin: 20px auto;
+	margin-top: 0;
 }
 
 .socials a {
 	display: inline-block;
 	height: 20px;
 	color: #ffc0cb;
-	padding: 5px;
-	transition: 0.25s ease;
-	border-radius: 50%;
 }
 
 .socials a svg {
+	background: #101010;
 	width: 20px;
-	fill: #7777ff;
-	transition: 0.25s ease;
+	fill: var(--color-orange);
+	padding: 5px;
+	border: 2px solid var(--color-orange);
 }
 
-.socials a:hover svg {
-	fill: #ffc0cb;
-}
-
-.socials a:hover{
-	background: #7777ff20;
+.socials a svg:hover {
+	background: var(--background-color3);
 }
 
 #LINKS {
@@ -67,29 +99,82 @@ h1 {
 	flex-wrap: wrap;
 	margin: 20px 0;
 
-	width: fit-content;
-	background: #101010;
-
-	border-left: 4px solid var(--link-color);
-	border-right: 4px solid var(--link-color);
+	padding: 10px;
+	background: var(--background-color3);
 }
 
 #LINKS a {
+	margin: 10px;
+	padding: 5px;
 	width: fit-content;
 	cursor: pointer;
-	padding: 10px;
-	color: var(--link-color);
-	transition: .1s ease;
+	color: var(--background-color3);
 	font-size: 1em;
+	border: 3px solid #101010;
 }
 
 #LINKS a:hover {
-	color: #ffc0cb;
+}
+
+.title {
+	width: fit-content;
+	font-size: 2.5em;
+	margin: 20px auto;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.my-something {
+	margin: 0 auto;
+	width: fit-content;
+	background: var(--background-color3);
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+.my-something h1 {
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+
+.my-something p, a {
+	font-size: 8px;
+	margin-bottom: 5px;
+}
+
+.list {
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.token {
+	width: 200px;
+	font-size: 10px;
+	background: #101010;
+	padding: 5px;
+	border: 2px solid var(--background-color);
+}
+
+.my-games .token:hover {
+	border: 2px solid var(--color-orange);
+}
+
+.my-songs .token:hover {
+	border: 2px solid var(--color-magenta);
+}
+
+.token img {
+	width: -webkit-fill-available;
+}
+
+.gm-libs * {
+	width: fit-content;
+	font-size: 8px;
 }
 
 #gm_libs a {
-	width: fit-content;
 }
-
-
 
