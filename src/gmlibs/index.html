@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<style>
+body {
+	background: #181818;
+	color: white;
+	font-size: 3em;
+}
+#gm_libs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#gm_libs a {
+	cursor: pointer;
+	font-size: 1em;
+	color: #285577;
+	transition: 0.25s ease;
+}
+#gm_libs a:hover {
+	font-size: 1.25em;
+	background: #242424;
+	color: white;
+}
+</style>
+</head>
+
+<body>
+	<div id="gm_libs"></div>
+	<script>
+			async function f(filename) {
+				const response = await fetch("https://raw.githubusercontent.com/amdreiso/gm-libs/refs/heads/main/"+filename)
+
+				if (!response.ok) {
+					throw new Error(`HTTP ${response.status}`)
+				}
+
+				const text = await response.text()
+				return {content:text,title:filename};
+			}
+
+			const create = (tok) => {
+				let a = document.createElement("a")
+				a.innerHTML = tok.title
+				const text = tok.content
+				a.addEventListener("click", 
+					async () => { 
+						try { 
+							await navigator.clipboard.writeText(text); 
+							console.log("Copied!"); 
+						} catch (err) {
+							console.error("Failed to copy:", err);
+						} 
+					}
+				);
+				gm_libs.append(a)
+			}
+			
+			f("console.gml").then(create)
+			f("fovy.gml").then(create)
+			f("input.gml").then(create)
+			f("vela.gml").then(create)
+			f("Inventory.gml").then(create)
+		</script>
+</body>
+
+</html>
+

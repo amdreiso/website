@@ -137,15 +137,15 @@ h1 {
 	margin-bottom: 5px;
 }
 
-.my-something p, a {
-	font-size: 8px;
-	margin-bottom: 5px;
+.my-something a {
+	margin: 2px;
 }
 
 .list {
 	width: fit-content;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }

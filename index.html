@@ -35,6 +35,12 @@
 			<div class="title" style="background: var(--color-orange); color: black;">VIDEOGAMES</div>
 			<div class="my-something my-games">
 				<div class="list">
+					<a href="https://amdrei.itch.io/coloniax">
+						<div class="token">
+							<img src="https://img.itch.zone/aW1nLzMxODI1NjIxLnBuZw==/360x286%23c/NU0eYP.png">
+							<span>COLONIAX</span>
+						</div>
+					</a>
 					<a href="https://amdrei.itch.io/celula-reincarnated">
 						<div class="token">
 							<img src="https://img.itch.zone/aW1nLzI3NTM3NzE0LnBuZw==/360x286%23c/%2Fqjq%2FQ.png">
@@ -46,27 +52,32 @@
 
 			<div class="title" style="background: var(--color-magenta); color: black;">MUSIC</div>
 			<div class="my-something my-songs">
-				<p>You can find all of them <a href="https://amdrei.bandcamp.com/">here</a></p>
 				<div class="list">
-					<a href="">
+					<a href="https://amdrei.bandcamp.com/album/pela-morte-de-toda-a-humanidade">
+						<div class="token">
+							<img src="https://f4.bcbits.com/img/a1236044004_1x1_700.avif">
+							<span>Reverendo Fascista</span>
+						</div>
+					</a>
+					<a href="https://amdrei.bandcamp.com/album/coloniax">
 						<div class="token">
 							<img src="https://f4.bcbits.com/img/a0038497349_16.jpg">
 							<span>COLONIAX</span>
 						</div>
 					</a>
-					<a href="">
+					<a href="https://amdrei.bandcamp.com/album/c-lula-reincarnated">
 						<div class="token">
 							<img src="https://f4.bcbits.com/img/a3946068379_16.jpg">
-							<span></span>
+							<span>Célula: REINCARNATED</span>
 						</div>
 					</a>
-					<a href="">
+					<a href="https://amdrei.bandcamp.com/album/circuita-ost">
 						<div class="token">
 							<img src="https://f4.bcbits.com/img/a3788362993_16.jpg">
 							<span>CIRCUITA</span>
 						</div>
 					</a>
-					<a href="">
+					<a href="https://amdrei.bandcamp.com/album/bass-on-cancer">
 						<div class="token">
 							<img src="https://f4.bcbits.com/img/a3257901407_16.jpg">
 							<span>Bass on Cancer</span>
@@ -82,41 +93,6 @@
 		</div>
 
 		<script type="text/javascript" src="js/home.js"></script>
-		<script>
-			async function f(filename) {
-				const response = await fetch("https://raw.githubusercontent.com/amdreiso/gm-libs/refs/heads/main/"+filename)
-
-				if (!response.ok) {
-					throw new Error(`HTTP ${response.status}`)
-				}
-
-				const text = await response.text()
-				return {content:text,title:filename};
-			}
-
-			const create = (tok) => {
-				let a = document.createElement("a")
-				a.innerHTML = tok.title
-				const text = tok.content
-				a.addEventListener("click", 
-					async () => { 
-						try { 
-							await navigator.clipboard.writeText(text); 
-							console.log("Copied!"); 
-						} catch (err) {
-							console.error("Failed to copy:", err);
-						} 
-					}
-				);
-				gm_libs.append(a)
-			}
-			
-			f("console.gml").then(create)
-			f("fovy.gml").then(create)
-			f("input.gml").then(create)
-			f("vela.gml").then(create)
-			f("Inventory.gml").then(create)
-		</script>
 	</body>
 </html>
 
