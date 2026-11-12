@@ -65,7 +65,7 @@ code {
 	border-radius: 5px;
 	background: #080808;
 	text-align: left;
-
+    white-space: pre-wrap;
 }
 
 
