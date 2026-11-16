@@ -30,6 +30,7 @@ const linkGenerate = () => {
 	}
 }
 
+linkPush(linkCreate("diary", "diary.html", "sorry"))
 linkPush(linkCreate("gm-libs", "src/gmlibs/index.html", "every gamemaker library i made"))
 linkPush(linkCreate("verbo", "src/verbo/index.html", "vocabulary memorization app"))
 linkPush(linkCreate("tolin", "src/tolin/tolin.html", "Stack based scripting language for Gamemaker"))
